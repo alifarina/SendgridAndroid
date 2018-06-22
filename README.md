@@ -15,5 +15,17 @@ Add these lines of code in your build.gradle of your project.
                  exclude group: 'org.apache.httpcomponents', module: 'httpclient'
          }
     }
+    
+    
+Change the SENDGRID_USERNAME/SENDGRID_PASSWORD or you can use the SENDGRID_API_KEY
+
+...
+                
+                SendGrid sendGrid = new SendGrid(SENDGRID_USERNAME, SENDGRID_PASSWORD);
+
+                Or you can use the send grid key
+                SendGrid sendGrid = new SendGrid(SENDGRID_API_KEY);
+                
+Add the attachments and we are good to go.
 
 Voila!!
