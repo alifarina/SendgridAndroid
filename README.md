@@ -11,7 +11,7 @@ Add these lines of code in your build.gradle of your project.
 ...
         
      dependencies {
-         compile ('com.github.danysantiago:sendgrid-android:1'){
+         implementation ('com.github.danysantiago:sendgrid-android:1'){
                  exclude group: 'org.apache.httpcomponents', module: 'httpclient'
          }
     }
