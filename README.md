@@ -6,13 +6,14 @@ https://github.com/danysantiago/sendgrid-android
 
 but the code runs on lower api version gives exception of using legacy HttpClient which android no longer support. So here is some LOC changes to make it work.
 
-Add these lines of code in your build.gradle of your project
+Add these lines of code in your build.gradle of your project.
 
-dependencies {
-.....
-    compile 'com.github.danysantiago:sendgrid-android:1',{
-        exclude group: 'org.apache.httpcomponents', module: 'httpclient'
+...
+        
+     dependencies {
+         compile ('com.github.danysantiago:sendgrid-android:1'){
+                 exclude group: 'org.apache.httpcomponents', module: 'httpclient'
+         }
     }
-}
 
 Voila!!
